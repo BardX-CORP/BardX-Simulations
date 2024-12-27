@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<script src="chart.umd.js"></script>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BardX Simulations</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>BardX Simulations</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#configuracao">Configuração</a></li>
+                <li><a href="#resultado">Resultados</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <aside>
+        <h2>Painel de Configuração</h2>
+        <form id="foguete-form">
+            <label for="comprimento">Comprimento do Foguete (cm):</label>
+            <input type="number" id="comprimento" name="comprimento" min="10" max="200" required>
+
+            <label for="diametro">Diâmetro do Foguete (cm):</label>
+            <input type="number" id="diametro" name="diametro" min="2" max="50" required>
+
+            <label for="pressao">Pressão Inicial (psi):</label>
+            <input type="number" id="pressao" name="pressao" min="10" max="150" required>
+
+            <label for="volume">Volume de Água (ml):</label>
+            <input type="number" id="volume" name="volume" min="100" max="2000" required>
+
+            <label for="angulacao">Angulação de Lançamento (graus):</label>
+            <input type="number" id="angulacao" name="angulacao" min="0" max="90" required>
+
+            <button type="button" id="simular">Simular</button>
+        </form>
+    </aside>
+
+    <main>
+        <section id="resultado">
+            <h2>Resultados da Simulação</h2>
+            <canvas id="grafico"></canvas>
+            <div id="detalhes-resultados"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 BardX</p>
+    </footer>
+</body>
+</html>
